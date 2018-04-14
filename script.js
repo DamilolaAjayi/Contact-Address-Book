@@ -1,76 +1,44 @@
-const grid = document.getElementById('sectionGrid');
-
-var contact ={
-  'cname' : [],
-  'cemail' : [],
-  'cimage' : [],
-  'cphone' : []
-};
-
-window.onload = function(){
-
-let i=0;
-let name = document.getElementById('inputedName');
-let email= document.getElementById('inputedEmail');
-let phone= document.getElementById('inputedNumber');
-let image = document.getElementById('inputedImage');
 var button = document.getElementById('create-Contact');
-var sectionGridDivElements;
+const grid = document.getElementById('sectionGrid');
 var elements = ['img', 'h4', 'p', 'pre', 'input'];
-
-//function appendDiv creates new div for added contact
-function appendDiv(){
-  
-  var sectionGridDiv = document.createElement("DIV");
-grid.appendChild(sectionGridDiv);
-grid.getElementsByTagName('div')[i].setAttribute('class', 'sectionGridDiv'); 
-
-  for( n in elements){
-  sectionGridDivElements = document.createElement(elements[n]);
-    sectionGridDiv.appendChild(sectionGridDivElements); 
-}
-document.getElementsByTagName('img')[i].setAttribute('src', image.value);
-document.getElementsByTagName('h4')[i].appendChild((document.createTextNode(name.value)));
-document.getElementsByTagName('p')[i].appendChild((document.createTextNode(phone.value)));
-document.getElementsByTagName('pre')[i].appendChild((document.createTextNode(email.value)));
-sectionGridDiv.getElementsByTagName('input')[i].setAttribute('type', 'submit');
-sectionGridDiv.getElementsByTagName('input')[i].setAttribute('value', 'Delete');
-var removeContact = sectionGridDiv.getElementsByTagName('input')[i];
-}
-
- //function contactArray adds details of each contact in an array
- function contactArray(){
-  
-  contact['cname'].push(name.value);
-  contact['cemail'].push(email.value);
-  contact['cphone'].push(phone.value);
-  contact['cimage'].push(image.value);
-}
+var sectionGridDiv, deleteButton;
+var contactArray =[];
+var i=0;
+window.onload= function(){
+    let name = document.getElementById('inputedName');
+let email = document.getElementById('inputedEmail');
+let phone = document.getElementById('inputedNumber');
+let image = document.getElementById('inputedImage');
  
-
 button.addEventListener('click', (e)=>{
-  e.preventDefault();
+     e.preventDefault();
+     sectionGridDiv= document.createElement('div');
+     grid.appendChild(sectionGridDiv);
+    sectionGridDiv.setAttribute('class','sectionGridDiv');
+     for( n in elements){
+          sectionGridDiv.appendChild(document.createElement(elements[n])); 
+        }
+      deleteButton = sectionGridDiv.getElementsByTagName('input')[0];
+      deleteButton.setAttribute('type', 'submit');
+      deleteButton.setAttribute('value', 'Delete');
+      deleteButton.setAttribute('class', i);
+      
+      sectionGridDiv.getElementsByTagName('img')[0].appendChild(document.createTextNode(image.value));
+      sectionGridDiv.getElementsByTagName('h4')[0].appendChild(document.createTextNode(name.value));
+      sectionGridDiv.getElementsByTagName('p')[0].appendChild(document.createTextNode(phone.value));
+      sectionGridDiv.getElementsByTagName('pre')[0].appendChild(document.createTextNode(email.value));
+    
+      contactArray.push(sectionGridDiv);
+      name.value='';
+      email.value='';
+      phone.value='';
+      image.value='';
+      i++;
+    })
 
-  appendDiv();
-  contactArray();
-
-  //reset the input text boxes
-name.value='';
-email.value='';
-phone.value='';
-image.value='';
-i++; //increment to create new independent elements
-console.log(i);
-})
+    deleteButton.addEventListener('click', (e)=>{
+        var divNo = deleteButton.getAttribute('class');
+        contactArray.splice(divNo, 1);
+    })
+ 
 }
-
-function deleteContact(){
-  contact['cname'].splice(indexOf(i),1);
-  contact['cemail'].splice(indexOf(i),1);
-  contact['cphone'].splice(indexOf(i),1);
-  contact['cimage'].splice(indexOf(i),1);
-}
-removeContact.addEventListener('click', (e)=>{
-    e.preventDefault();
-    deleteContact();
-})
