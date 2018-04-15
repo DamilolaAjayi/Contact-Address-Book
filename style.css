@@ -5,14 +5,6 @@ h1{
     padding-top:40px;
   font-family: 'Lobster', cursive;
 }
-#searchBar{
-    float:left;
-    padding: 10px;
-    border-radius: 6px;
-    width:200px;    
-    margin-right:10px; 
-    background-color: #000d1a;
-}
 body{
     background-color:	 #33ffbb;
     border-radius: 6px;
@@ -27,18 +19,6 @@ body{
     bottom:0;
   font-family: 'Libre Baskerville', serif;
 }
-button {
-    border-radius: 6px;
-    border: none;
-    background-color: #000d1a;
-    padding: 10px;
-    text-transform: uppercase;
-    width: 200px;
-    cursor: pointer;
-    margin-left:5px;
-    color: white;
-  }
-
 label{
     margin:9px;
 }
