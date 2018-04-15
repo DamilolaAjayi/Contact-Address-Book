@@ -51,25 +51,34 @@ fieldset{
 #sectionGrid{
     position:fixed;
     display:flex;
+    flex-wrap:wrap;
+    width:100%;
 }
+
 .sectionGridDiv{
+    border-radius: 10px;
     margin:20px;
     display:block;
     background-color:#00e699;
     padding:5px;
-    width:30%;
+    min-width:200px !important;
     text-align:center;
     font-weight: 600;
+    position:relative;
 }
 img{
     max-width:30%;
     display:block;
     margin-right:auto;
     margin-left:auto;
+    border-radius: 50%;
 }
 .sectionGridDiv > input:hover{
     background-color: red;
+    cursor:pointer;
+    box-shadow: 0 8px 12px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19)
 }
 .sectionGridDiv > input {
     border:0px;
+    float:bottom;
 }
