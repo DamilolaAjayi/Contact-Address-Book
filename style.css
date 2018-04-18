@@ -2,8 +2,9 @@
 h1{
     text-align:left;
     padding-top:40px;
+    font-family: 'Lobster', cursive;
 }
-h3{
+.sectionGridDiv > h3{
     cursor:pointer;
     text-decoration:underline;
     color:blue;
@@ -14,14 +15,13 @@ body{
     border-radius: 6px;
     width:98%;
     height:97%;
-    margin:15px;
     position: fixed;
     overflow:auto;    
     top:0;
     left:0;
     right:0;
     bottom:0;
-    /*background:url(./img/edit.png) no-repeat;*/
+    font-family: 'Libre Baskerville', serif;
 
 }
 button {
@@ -33,14 +33,12 @@ button {
   width:10px;
 }
 
-
-
 label{
-    margin:10px;
+    margin:7px;
 }
 #create-Contact{
 float:right;
-margin-right: 40px;
+margin-right: 7px;
 }
 fieldset{
     background-color:white;
@@ -83,9 +81,9 @@ fieldset{
     top: 0;
     width: 100%; /* Full width */
     height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    overflow: auto; 
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.4); 
 }
 
 /* Modal Content/Box */
@@ -94,7 +92,7 @@ fieldset{
     margin: 15% auto; /* 15% from the top and centered */
     padding: 20px;
     border: 1px solid #888;
-    width: 30%; /* Could be more or less, depending on screen size */
+    width: 30%; 
 }
 
 /* The Close Button */
