@@ -1,0 +1,158 @@
+body{
+    font-family: 'Libre Baskerville', serif;
+    background: #3b6978;
+    color: #204051;
+}
+body, html{
+    width: 100%;
+    margin: 0;
+}
+.container{
+    margin: 1.2%;
+    background-color: #84a9ac;
+    height: 100vh;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    padding: 0 20px 0 20px;
+}
+h1{
+    padding: 15px;
+    margin: 0;
+    text-align:center;
+    max-width: 300px;
+    font-family: 'Lobster', cursive;
+}
+
+fieldset{
+    background: #204051;
+    width:300px;
+    box-shadow: 10px 10px 18px #3b6978;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+}
+.form-group{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+input{
+    height: 20px;
+}
+input[type="submit"]{   
+    border: 1px solid transparent;
+    line-height:40px;
+    height: 40px;
+    border-radius: 4px;
+    width: 100%;
+    cursor: pointer;
+}
+input[type="submit"]:hover{
+    background: #84a9ac;
+}
+label{
+    color: white;
+    font-weight: bold;
+    margin-left: 0 !important;
+}
+
+#sectionGrid{
+    width:100%;
+}
+
+.sectionGridDiv > h3{
+    cursor:pointer;
+    text-decoration:underline;
+    color:blue;
+}
+
+label{
+    margin:1rem;
+}
+
+.sectionGridDiv{
+    border-radius: 10px;
+    margin:20px;
+    display:block;
+    background-color:#00e699;
+    padding:5px;
+    min-width:200px !important;
+    text-align:center;
+    font-weight: 600;
+    position:relative;
+}
+
+.sectionGridDiv > input:hover{
+    background-color: red;
+    cursor:pointer;
+    box-shadow: 0 8px 12px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19)
+}
+.sectionGridDiv > input {
+    border:none;
+    float:bottom;
+}
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; 
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.4); 
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: #33ffbb;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 30%; 
+}
+
+/* The Close Button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+@media (min-width: 1360px){
+.container{
+    height: 600px;
+}
+}
+@media (min-width: 600px){
+    .container{
+       display:flex;
+       flex-direction: column;
+    }
+    .input{
+        margin : 0 auto;
+    }
+}
+@media (min-width: 992px){
+    .container{
+        display:flex;
+        flex-direction: row;
+     }
+    .input{
+        margin: 0;
+    }
+}
