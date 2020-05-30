@@ -27,7 +27,7 @@ let image = document.getElementById('inputedImage');
 
 button.addEventListener('click', addContact);
 function addContact(e){
-     e.preventDefault();
+    //  e.preventDefault();
 
      sectionGridDiv= document.createElement('div');
      modal = document.createElement('div');

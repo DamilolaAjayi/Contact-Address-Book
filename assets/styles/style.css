@@ -10,11 +10,15 @@ body, html{
 .container{
     margin: 1.2%;
     background-color: #84a9ac;
-    height: 100vh;
     border-radius: 10px;
     display: flex;
     flex-direction: row;
     padding: 0 20px 0 20px;
+}
+fieldset{
+    background: #204051;
+    width:300px;
+    box-shadow: 10px 10px 18px #3b6978;
 }
 h1{
     padding: 15px;
@@ -23,12 +27,35 @@ h1{
     max-width: 300px;
     font-family: 'Lobster', cursive;
 }
-
-fieldset{
+.contact{
+    width : 30%;
     background: #204051;
-    width:300px;
     box-shadow: 10px 10px 18px #3b6978;
+    float: left;
+    margin: 2rem;
+    border-radius: 4px;
 }
+#contactBtn{
+    float : right;
+}
+.fa-trash{
+    cursor: pointer;
+    margin: 0 10px;
+    color: steelblue;
+}
+.fa-trash:hover{
+    color:rgba(224, 75, 75, 0.9);
+    transition: color 0.3s;
+}
+.fa-user-edit{
+    color: steelblue;
+    cursor:pointer;
+}
+.fa-user-edit:hover{
+    color: rgba(239, 247, 247, 0.5);
+    cursor:pointer;
+}
+
 
 form{
     display: flex;
@@ -44,12 +71,13 @@ input{
     height: 20px;
 }
 input[type="submit"]{   
-    border: 1px solid transparent;
+    border: none;
     line-height:40px;
     height: 40px;
     border-radius: 4px;
     width: 100%;
     cursor: pointer;
+    outline: none;
 }
 input[type="submit"]:hover{
     background: #84a9ac;
@@ -138,7 +166,7 @@ label{
     height: 600px;
 }
 }
-@media (min-width: 600px){
+@media (max-width: 600px){
     .container{
        display:flex;
        flex-direction: column;
@@ -147,7 +175,7 @@ label{
         margin : 0 auto;
     }
 }
-@media (min-width: 992px){
+/* @media (min-width: 992px){
     .container{
         display:flex;
         flex-direction: row;
@@ -155,4 +183,4 @@ label{
     .input{
         margin: 0;
     }
-}
+} */
